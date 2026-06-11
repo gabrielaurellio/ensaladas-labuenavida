@@ -4,8 +4,8 @@
 <head>
 	<meta charset="UTF-8">
 
-	<!-- Preload LCP — primeira imagem visível acima do fold -->
-	<link rel="preload" as="image" fetchpriority="high" href="img/14.webp">
+	<!-- Preload LCP -->
+	<link rel="preload" as="image" fetchpriority="high" href="saladas-nutri-es.webp" imagesrcset="saladas-nutri-es-400.webp 400w, saladas-nutri-es.webp 800w" imagesizes="(max-width: 500px) 400px, 800px">
 
 	<!-- Preload fontes críticas -->
 	<link rel="preload" href="/fonts/roboto-400-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -484,7 +484,27 @@
 
 	<!-- CSS principal local -->
 	<link rel="stylesheet" href="/css/elementor.css">
-	<link rel="stylesheet" href="/fonts/fonts.css">
+
+	<!-- Fontes inline — elimina request bloqueante de fonts.css -->
+	<style>
+@font-face{font-family:'Roboto';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/roboto-400-latin.woff2') format('woff2')}
+@font-face{font-family:'Roboto';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/roboto-700-latin.woff2') format('woff2')}
+@font-face{font-family:'Sora';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/sora-400-latin.woff2') format('woff2')}
+@font-face{font-family:'Sora';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/sora-600-latin.woff2') format('woff2')}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/opensans-400-latin.woff2') format('woff2')}
+@font-face{font-family:'Open Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/opensans-600-latin.woff2') format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/poppins-400-latin.woff2') format('woff2')}
+@font-face{font-family:'Poppins';font-style:normal;font-weight:600;font-display:swap;src:url('/fonts/poppins-600-latin.woff2') format('woff2')}
+@font-face{font-family:'Roboto Slab';font-style:normal;font-weight:400;font-display:swap;src:url('/fonts/robotoslab-400-latin.woff2') format('woff2')}
+@font-face{font-family:'Roboto Slab';font-style:normal;font-weight:700;font-display:swap;src:url('/fonts/robotoslab-700-latin.woff2') format('woff2')}
+	</style>
+
+	<!-- Stub Elementor config — evita 3 erros de console -->
+	<script>
+	window.elementorFrontendConfig={environmentMode:{edit:false,wpPreview:false,isScriptDebug:false},i18n:{},is_rtl:false,breakpoints:{xs:0,sm:480,md:768,lg:1025,xl:1440,xxl:1600},responsive:{activeBreakpoints:{mobile:{label:"Mobile Portrait",value:767,default_value:767,direction:"max",is_enabled:true},tablet:{label:"Tablet Portrait",value:1024,default_value:1024,direction:"max",is_enabled:true}}},version:"3.32.5",is_static:true,experimentalFeatures:{},urls:{assets:"/js/"},swiperClass:"swiper",settings:{page:[],editorPreferences:[]},kit:{},post:{id:11737,title:"Ensaladas en Tarro",excerpt:"",featuredImage:false}};
+	window.ElementorProFrontendConfig={ajaxurl:"",nonce:"",urls:{assets:"/js/"},shareButtonsNetworks:{},facebook_sdk:{lang:"es_LA",app_id:""},lottie:{defaultAnimationUrl:""}};
+	window.lazyloadRunObserver=function(){};
+	</script>
 
 	<link rel="dns-prefetch" href="https://www.youtube.com">
 
@@ -528,10 +548,12 @@
 				<div class="elementor-element elementor-element-3305f33 elementor-widget elementor-widget-image"
 					data-id="3305f33" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
-						<img fetchpriority="high" decoding="async" width="800" height="547"
-							src="saladas-nutri-es.png" class="attachment-large size-large wp-image-12705"
-							alt="Ensaladas en Tarro"
-							sizes="(max-width: 800px) 100vw, 800px">
+						<img fetchpriority="high" decoding="async" width="800" height="726"
+							src="saladas-nutri-es.webp"
+							srcset="saladas-nutri-es-400.webp 400w, saladas-nutri-es.webp 800w"
+							sizes="(max-width: 500px) 400px, 800px"
+							class="attachment-large size-large wp-image-12705"
+							alt="Ensaladas en Tarro">
 					</div>
 				</div>
 				<div class="elementor-element elementor-element-a85d7a1 elementor-widget elementor-widget-image"
@@ -663,7 +685,7 @@
 					<div class="elementor-element elementor-element-9520a06 elementor-widget elementor-widget-image"
 						data-id="9520a06" data-element_type="widget" data-widget_type="image.default">
 						<div class="elementor-widget-container">
-							<img decoding="async" width="800" height="800" src="ensaladas-pote-es.png"
+							<img decoding="async" width="800" height="800" src="ensaladas-pote-es.webp"
 								class="attachment-large size-large wp-image-12690" alt="Ensaladas en tarro"
 								sizes="(max-width: 800px) 100vw, 800px">
 						</div>
@@ -1146,7 +1168,7 @@
 						data-id="761b811" data-element_type="widget" data-widget_type="image.default">
 						<div class="elementor-widget-container">
 							<img loading="lazy" decoding="async" width="800" height="744"
-								src="mockup-saladas-es.png"
+								src="mockup-saladas-es.webp"
 								class="attachment-large size-large wp-image-12704" alt="Mockup Ensaladas en Tarro"
 								sizes="(max-width: 800px) 100vw, 800px">
 						</div>
@@ -1242,7 +1264,7 @@
 					data-id="39b23cfa" data-element_type="widget" data-widget_type="image.default">
 					<div class="elementor-widget-container">
 						<img loading="lazy" decoding="async" width="800" height="800"
-							src="priscila-prates.jpg" class="attachment-large size-large wp-image-12700"
+							src="priscila-prates.webp" class="attachment-large size-large wp-image-12700"
 							alt="Priscila Prates - Nutricionista"
 							sizes="(max-width: 800px) 100vw, 800px">
 					</div>
@@ -1276,30 +1298,30 @@
 							<div class="elementor-image-carousel swiper-wrapper" aria-live="off">
 								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1 de 6">
 									<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-											src="depoimento-01-es.png"
+											src="depoimento-01-es.webp"
 											alt="zeoob.com_1sc590jknq_photo"></figure>
 								</div>
 								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2 de 6">
 									<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-											src="depoimento-02-es.png"
+											src="depoimento-02-es.webp"
 											alt="zeoob.com_1drwoio7vc_photo"></figure>
 								</div>
 								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3 de 6">
 									<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-											src="depoimento-03-es.png"
+											src="depoimento-03-es.webp"
 											alt="zeoob.com_2rq9lp05ct_photo"></figure>
 								</div>
 								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4 de 6">
 									<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-											src="depoimento-04-es.png" alt="1"></figure>
+											src="depoimento-04-es.webp" alt="1"></figure>
 								</div>
 								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5 de 6">
 									<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-											src="depoimento-05-es.png" alt="2"></figure>
+											src="depoimento-05-es.webp" alt="2"></figure>
 								</div>
 								<div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6 de 6">
 									<figure class="swiper-slide-inner"><img decoding="async" class="swiper-slide-image"
-											src="depoimento-06-es.png" alt="3"></figure>
+											src="depoimento-06-es.webp" alt="3"></figure>
 								</div>
 							</div>
 							<div class="elementor-swiper-button elementor-swiper-button-prev" role="button"
