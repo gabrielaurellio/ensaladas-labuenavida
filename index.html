@@ -523,6 +523,33 @@
 </style>
 	<meta name="theme-color" content="#FFFFFF">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+	<script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-subids async defer></script>
+	<script>
+	window.addEventListener('load', function() {
+		setTimeout(function() {
+			window.pixelId = "6a2a03e1600a4d01d922d9cd";
+			var a = document.createElement("script");
+			a.setAttribute("async", "");
+			a.setAttribute("defer", "");
+			a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+			document.head.appendChild(a);
+		}, 3500);
+		['mousedown','touchstart','keydown','scroll'].forEach(function(e){
+			document.addEventListener(e, function init(){
+				document.removeEventListener(e, init);
+				if (!window._utmLoaded) {
+					window._utmLoaded = true;
+					window.pixelId = "6a2a03e1600a4d01d922d9cd";
+					var a = document.createElement("script");
+					a.setAttribute("async", "");
+					a.setAttribute("defer", "");
+					a.setAttribute("src", "https://cdn.utmify.com.br/scripts/pixel/pixel.js");
+					document.head.appendChild(a);
+				}
+			});
+		});
+	});
+	</script>
 </head>
 
 <body
